@@ -78,5 +78,5 @@ const person = {
 
 // ! Object.entries()- 0(n): which returns an array of all the keys and values in an object
 
-b; // ! Array- Big-O
+// ! Array- Big-O
 // ** An ordered collection of values.

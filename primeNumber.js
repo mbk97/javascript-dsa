@@ -13,7 +13,7 @@ const isPrime = (n) => {
 
   // ! if n is greater than 1, we need to check if it is divisible by any smaller number, for this we use a for loop that starts from 2 since every number is divisible by 1.
 
-  //   ** the condition is less than n and not less than or equal to n since n is always divisible by itself
+  //   ** the condition is less than and not less than or equal to n since n is always divisible by itself
   for (let i = 2; i < n; i++) {
     if (n % i === 0) {
       return false;
@@ -24,23 +24,41 @@ const isPrime = (n) => {
   return true;
 };
 
-console.log(isPrime(10)); // false
-console.log(isPrime(5)); // true
-console.log(isPrime(4)); // false
+// console.log(isPrime(10)); // false
+// console.log(isPrime(5)); // true
+// console.log(isPrime(4)); // false
 
 // ** Using while loop
 
-const isPrimeWhileLoop = (n) => {
-  let divider = 2;
+// const isPrimeWhileLoop = (n) => {
+//   let divider = 2;
 
-  while (n > divider) {
-    if (n % divider === 0) {
-      return false;
+//   while (n > divider) {
+//     if (n % divider === 0) {
+//       return false;
+//     } else {
+//       divider++;
+//     }
+//     return true;
+//   }
+// };
+
+// console.log(isPrimeWhileLoop(7));
+
+const checkPrime = (n) => {
+  if (n < 2) {
+    return false;
+  }
+
+  for (let i = 2; i < n; i++) {
+    if (n % i === 0) {
+      return "Not Prime";
     } else {
-      divider++;
+      return "Number is a prime number";
     }
-    return true;
   }
 };
 
-console.log(isPrimeWhileLoop(7));
+console.log(checkPrime(5));
+console.log(checkPrime(10));
+console.log(checkPrime(11));

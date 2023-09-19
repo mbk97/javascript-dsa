@@ -20,3 +20,15 @@ const findElemet = (arr, target) => {
 };
 
 console.log(findElemet([3, 45, 6, 7, 9], 6));
+
+const findNewElement = (arr, target) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      return { index: i, value: target };
+    }
+  }
+
+  return -1;
+};
+
+console.log(findNewElement([3, 45, 6, 7, 9], 45));
