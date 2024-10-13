@@ -6,29 +6,25 @@
 
 // ! Examples
 // ** factorial(4) = 4*3*2*1 = 24;
-// ** factorail(5) = 5*4*3*2*1 = 120;
+// ** factorial(5) = 5*4*3*2*1 = 120;
 
 // ! Practice
 
 // ** 1. Using for loop
-
 const factorial = (n) => {
   //! We are setting the answer variable to 1 because the factorial of both 0 and 1 == 1;
-
   //! Check if the number passed to the factorial function is equal to 0 or 1
   let answer = 1;
   if (n == 0 || n == 1) {
     return answer;
   } else if (n > 1) {
-    // !If the number passed is greater than 1, then find the factorial.
-
+    //! If the number passed is greater than 1, then find the factorial.
     for (let i = 2; i <= n; i++) {
       answer = answer * i;
     }
-    // console.log(answer);
     return answer;
   } else {
-    // ! check if the number passed is not a negative number
+    //! check if the number passed is not a negative number
     return "Number must be positive";
   }
 };
@@ -38,9 +34,8 @@ const factorial = (n) => {
 // console.log(factorial(50));
 
 // ** 2. Using recursion.
-
 const factorialRecursion = (n) => {
-  // ! If the number is less than 0, reject it.
+  //! If the number is less than 0, reject it.
   if (n < 0) {
     return "Number must be a positive integer";
   } else if (n == 0) {
@@ -50,6 +45,17 @@ const factorialRecursion = (n) => {
     return n * factorialRecursion(n - 1);
   }
 };
+function factorialRecursionTwo(n) {
+  let answer = 1;
+  if (n === 0 || n === 1) {
+    return answer;
+  } else if (n > 1) {
+    answer = n * factorialRecursion(n - 1);
+    return answer;
+  } else {
+    return "Number must be a positive integer";
+  }
+}
 
 console.log(factorialRecursion(5));
 
@@ -65,6 +71,17 @@ const factorializeWhile = (n) => {
   return result;
 };
 
+function factorializeWhileTwo(n) {
+  let answer = n;
+  if (n === 0 || n === 1) return answer;
+  while (n > 1) {
+    n--;
+    answer *= n;
+  }
+  return answer;
+}
+
+console.log(factorializeWhileTwo(10));
 console.log(factorializeWhile(5));
 
 // ! BIG-0 guide

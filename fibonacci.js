@@ -10,8 +10,21 @@
 
 // ** 1. The first two numbers in the sequence are 0 and 1.
 
+const fibonacciTwo = (n) => {
+  let fib = [0, 1];
+
+  for (i = 2; i < n; i++) {
+    fib[i] = fib[i - 1] + fib[i - 2];
+  }
+  const sum = fib.reduce((a, b) => {
+    return a + b;
+  });
+  console.log(fib); //returns an array itself [0,1,1,2,3]
+  return sum; //returns the sum of the array
+};
+
 const fibonacci = (n) => {
-  // !from the result given below, you sholud know that in a case like this, the first two numbers will be 0 and 1
+  // !from the result given below, you should know that in a case like this, the first two numbers will be 0 and 1
   const fib = [0, 1];
 
   // ! Next,populate the remaining element from the third element till n while satifying the condition that every number is the sum of the previous two numbers. To do this you can utilize a for loop by starting your index from 2, since you already have element from index = 0 and index = 1. Iterate till you have n elements in the array
@@ -61,7 +74,6 @@ const printFibo = (n) => {
 };
 
 // console.log(printFibo(5));
-
 const newFib = (n) => {
   if (n <= 0) {
     return 0;

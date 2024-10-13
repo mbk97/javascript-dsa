@@ -2,7 +2,6 @@
 
 const powerOfTwo = (n) => {
   // ! Check if n is a positive integer
-
   if (n < 1) {
     return false;
   } else if (n > 1 && n % 2 !== 0) {

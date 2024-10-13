@@ -1,6 +1,6 @@
 // !! PRIME NUMBER
 
-// ** A prime number is a natural number greater than 1, and is divisible only by 1 and the number itself e.g 2,3,5,7,11
+// ** A prime number is a natural number greater than 1, and is divisible only by 1 and the number itself e.g 3,5,7,11
 
 // ** Using for loop
 
@@ -11,7 +11,7 @@ const isPrime = (n) => {
     return false;
   }
 
-  // ! if n is greater than 1, we need to check if it is divisible by any smaller number, for this we use a for loop that starts from 2 since every number is divisible by 1.
+  // ! if n is greater than 1, we need to check if it is divisible by any smaller number, for this we use a for loop that starts from 2 since every number is divisible by 1 and starting from 2 avoids unnecessary iterations.
 
   //   ** the condition is less than and not less than or equal to n since n is always divisible by itself
   for (let i = 2; i < n; i++) {
