@@ -11,16 +11,13 @@
 // ** 1. The first two numbers in the sequence are 0 and 1.
 
 const fibonacciTwo = (n) => {
+  //* The importance of initializing the first array with [0, 1] in your fibonacciTwo function lies in the fact that these are the base cases for the Fibonacci sequence
   let fib = [0, 1];
 
   for (i = 2; i < n; i++) {
     fib[i] = fib[i - 1] + fib[i - 2];
   }
-  const sum = fib.reduce((a, b) => {
-    return a + b;
-  });
-  console.log(fib); //returns an array itself [0,1,1,2,3]
-  return sum; //returns the sum of the array
+  return fib; //returns the sum of the array
 };
 
 const fibonacci = (n) => {

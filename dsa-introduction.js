@@ -19,6 +19,14 @@
 
 // ! Big-o Time complexity: It counts the number of times a statement executes based on the input size
 
+//! 𝑂(n)
+
+//* O(n): Searching through a stack of papers to find a specific one. As the number of papers increases, the time it takes to find the correct paper increases proportionally.
+
+//! 𝑂(1)
+
+//* O(1): Looking up a phone number in your contacts by directly typing the name. You instantly retrieve the number regardless of how many contacts you have.
+
 //nm jkjlkj
 
 // ** Example
@@ -82,3 +90,11 @@ const person = {
 
 // ! Array- Big-O
 // ** An ordered collection of values.
+
+// * insert/remove at end - 0(1) - constant time complexity
+// * insert/remove at beginning - 0(n) - linear time complexity : because the index has to be reset for every remaining element in the array
+// * access - 0(1) - Constant time complexity
+// * Search - 0(n) - linear:  because, in the worst case, you may need to examine every element of the array to find the target
+// * Push/pop - 0(1)
+//* shift/unshift/concat/slice/splice - 0(n)
+//* forEach/map/filter/reduce - 0(n)
